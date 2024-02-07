@@ -86,7 +86,7 @@ public class Clube {
     
     @Override
     public String toString() {
-        return this.posicao + "º Lugar: " + this.nome + ", Pontos: " + this.pontos + ", Saldo de Gols: " + this.saldoGols +
-                ", Vitórias: " + this.vitorias + ", Empates: " + this.empates + ", Derrotas: " + this.derrotas;
+        return this.posicao + "º Lugar: " + getNome() + ", Pontos: " + getPontos() + ", Saldo de Gols: " + getSaldoGols() +
+                ", Vitórias: " + getVitorias() + ", Empates: " + getEmpates() + ", Derrotas: " + getDerrotas();
     }
 }
