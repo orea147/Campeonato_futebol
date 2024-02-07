@@ -3,8 +3,8 @@ public class Campeonato {
     
     Clube[] clubes;
     
-    public Campeonato (Clube[] times) {
-        clubes = times;
+    public Campeonato (Clube[] clubes) {
+        this.clubes = clubes;
     }
         
     public void jogarPartida (Clube m, Clube v){
@@ -41,7 +41,10 @@ public class Campeonato {
 
         for (int i = 0; i < clubes.length - 1; i++) {
             for (int j = i + 1; j < clubes.length; j++) {
-                if (clubes[i].getPontos() < clubes[j].getPontos()) {
+                if (clubes[i].getPontos() < clubes[j].getPontos() || 
+                        (clubes[i].getPontos() == clubes[j].getPontos() && 
+                        clubes[i].getSaldoGols() < clubes[j].getSaldoGols())) 
+                {
                     Clube temporario = clubes[i];
                     clubes[i] = clubes[j];
                     clubes[j] = temporario;
