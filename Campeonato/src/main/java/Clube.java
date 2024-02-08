@@ -19,6 +19,10 @@ public class Clube {
         
     public Clube (){  
     }
+
+    public int getPosicao() {
+        return posicao;
+    }
     
     public int getVitorias() {
         return vitorias;
@@ -86,7 +90,7 @@ public class Clube {
     
     @Override
     public String toString() {
-        return this.posicao + "º Lugar: " + getNome() + ", Pontos: " + getPontos() + ", Saldo de Gols: " + getSaldoGols() +
+        return getPosicao() + "º Lugar: " + getNome() + ", Pontos: " + getPontos() + ", Saldo de Gols: " + getSaldoGols() +
                 ", Vitórias: " + getVitorias() + ", Empates: " + getEmpates() + ", Derrotas: " + getDerrotas();
     }
 }
