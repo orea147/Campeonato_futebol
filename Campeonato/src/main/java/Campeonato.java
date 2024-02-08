@@ -37,7 +37,7 @@ public class Campeonato {
 
     public String getClassificacao() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\nClassificação\n\n");
+        sb.append("\nClassificação do campeonato:\n\n");
 
         for (int i = 0; i < clubes.length - 1; i++) {
             for (int j = i + 1; j < clubes.length; j++) {
