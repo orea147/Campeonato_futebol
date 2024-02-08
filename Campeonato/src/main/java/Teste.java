@@ -5,7 +5,10 @@ public class Teste {
             new Clube("Corinthians"),
             new Clube("São Paulo"),
             new Clube("Santos"),
-            new Clube("Flamengo")
+            new Clube("Flamengo"),
+            new Clube("Vasco"),
+            new Clube("Atletico"),
+            new Clube("Gremio")
         };
 
         Campeonato camp = new Campeonato(clubes);
