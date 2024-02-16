@@ -7,7 +7,7 @@ public class Campeonato {
         this.clubes = clubes;
     }
         
-    public void jogarPartida (Clube m, Clube v){
+    private void jogarPartida (Clube m, Clube v){
         int saldo;
         int golsM = (int) (Math.random() * 6);
         int golsV = (int) (Math.random() * 6);
@@ -24,15 +24,19 @@ public class Campeonato {
             m.empatar();
             v.empatar();
         }
+        System.out.println(m.getNome() + " " + golsM + " x " + golsV + " " + v.getNome());
     }
     
     public void jogarCampeonato () {
+        System.out.println("\n        Partidas");
+        System.out.println("-----------------------------");
         for (int i = 0; i < clubes.length; i++) {
             for (int j = i + 1; j < clubes.length; j++) {
                 jogarPartida(clubes[i],clubes[j]);
                 jogarPartida(clubes[j],clubes[i]);
             }
         }
+        System.out.println("-----------------------------");
     }
 
     public String getClassificacao() {
